@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Voyage - Drapeaux des Villes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Mon Voyage - Drapeaux des Villes</h1>
+    <form id="citiesForm">
+      <label for="birthCity">Ville de naissance :</label>
+      <input type="text" id="birthCity" name="birthCity" required>
+      <br>
+      <label for="livedCities">Villes où j'ai vécu (séparées par des virgules) :</label>
+      <input type="text" id="livedCities" name="livedCities" required>
+      <br>
+      <input type="submit" value="Afficher les drapeaux">
+    </form>
+    <div id="flagContainer"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
