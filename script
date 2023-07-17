@@ -1,0 +1,35 @@
+const form = document.getElementById('citiesForm');
+const flagContainer = document.getElementById('flagContainer');
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  // Récupérer les villes saisies par l'utilisateur
+  const birthCity = document.getElementById('birthCity').value;
+  const livedCities = document.getElementById('livedCities').value.split(',');
+
+  // Créer un tableau avec les villes
+  const cities = [birthCity, ...livedCities];
+
+  // Effacer le contenu précédent du flagContainer
+  flagContainer.innerHTML = '';
+
+  // Appeler la fonction pour afficher les drapeaux
+  displayFlags(cities);
+});
+
+function displayFlags(cities) {
+  cities.forEach(city => {
+    // Créer un élément img pour le drapeau
+    const flagImg = document.createElement('img');
+    flagImg.classList.add('flag');
+    
+    // Ici, vous devriez utiliser une API de drapeaux pour obtenir les liens des images de drapeaux en fonction des noms de ville ou des codes de pays.
+    // Pour cet exemple, nous utiliserons une image fixe pour représenter un drapeau.
+    // Remplacez le lien "https://example.com/flag.png" par le lien réel du drapeau de chaque ville.
+    flagImg.src = 'https://example.com/flag.png';
+
+    // Ajouter l'image du drapeau au flagContainer
+    flagContainer.appendChild(flagImg);
+  });
+}
