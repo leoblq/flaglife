@@ -1,0 +1,27 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+label, input {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+}
+
+#flagContainer {
+  margin-top: 20px;
+}
